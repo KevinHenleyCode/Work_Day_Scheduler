@@ -1,14 +1,3 @@
-$('tbody .nine').addClass('past');
-$('tbody .ten').addClass('past');
-$('tbody .eleven').addClass('present');
-$('tbody .twelve').addClass('future');
-$('tbody .one').addClass('future');
-$('tbody .two').addClass('future');
-$('tbody .three').addClass('future');
-$('tbody .four').addClass('future');
-$('tbody .five').addClass('future');
-
-var currentHour = moment().format('h')
 
 function currentDate() {    
     var currentTime = moment().format('MMMM Do YYYY, h:mm:ss A')
@@ -91,3 +80,90 @@ $('.btn5').on('click',function() {
     let text = $('.five textarea').val();
     localStorage.setItem('five', text)
 })
+
+
+var nineTime = $('.nine textarea').attr('name')
+var tenTime = $('.ten textarea').attr('name')
+var elevenTime = $('.eleven textarea').attr('name')
+var twelveTime = $('.twelve textarea').attr('name')
+var oneTime = $('.one textarea').attr('name')
+var twoTime = $('.two textarea').attr('name')
+var threeTime = $('.three textarea').attr('name')
+var fourTime = $('.four textarea').attr('name')
+var fiveTime = $('.five textarea').attr('name')
+
+
+var currentHour = moment().hour()
+
+if (currentHour == nineTime) {
+    $('.nine').addClass('present');
+} else if (currentHour < nineTime) {
+    $('.nine').addClass('future');
+} else {
+    $('.nine').addClass('past');
+}
+
+if (currentHour == tenTime) {
+    $('.ten').addClass('present');
+} else if (currentHour < tenTime) {
+    $('.ten').addClass('future');
+} else {
+    $('.ten').addClass('past');
+}
+
+if (currentHour == elevenTime) {
+    $('.eleven').addClass('present');
+} else if (currentHour < elevenTime) {
+    $('.eleven').addClass('future');
+} else {
+    $('.eleven').addClass('past');
+}
+
+if (currentHour == twelveTime) {
+    $('.twelve').addClass('present');
+} else if (currentHour < twelveTime) {
+    $('.twelve').addClass('future');
+} else {
+    $('.twelve').addClass('past');
+}
+
+if (currentHour == oneTime) {
+    $('.one').addClass('present');
+} else if (currentHour < oneTime) {
+    $('.one').addClass('future');
+} else {
+    $('.one').addClass('past');
+}
+
+if (currentHour == twoTime) {
+    $('.two').addClass('present');
+} else if (currentHour < twoTime) {
+    $('.two').addClass('future');
+} else {
+    $('.two').addClass('past');
+}
+
+if (currentHour == threeTime) {
+    $('.three').addClass('present');
+} else if (currentHour < threeTime) {
+    $('.three').addClass('future');
+} else {
+    $('.three').addClass('past');
+}
+
+if (currentHour == fourTime) {
+    $('.four').addClass('present');
+} else if (currentHour < fourTime) {
+    $('.four').addClass('future');
+} else {
+    $('.four').addClass('past');
+}
+
+if (currentHour == fiveTime) {
+    $('.five').addClass('present');
+} else if (currentHour < fiveTime) {
+    $('.five').addClass('future');
+} else {
+    $('.five').addClass('past');
+}
+
