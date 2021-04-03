@@ -22,6 +22,11 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.clock {
+  font-size: 1.5em;
+  color: #77dd77;
+}
+
 .description {
   white-space: pre-wrap;
 }
