@@ -1,13 +1,15 @@
-
+// adds the currentTime to the currentDay id innerHTML
 function currentDate() {    
     var currentTime = moment().format('MMMM Do YYYY, h:mm:ss A')
     $('#currentDay').html(currentTime)    
 }
 
+// calls the function as soon as the page loads and updates every second
 currentDate()
 setInterval(currentDate, 1000);
 
 
+// sets the textarea html to the localstorage values
 var getNine = localStorage.getItem('nine')
 $('.nine textarea').html(getNine)
 
@@ -36,6 +38,7 @@ var getFive = localStorage.getItem('five')
 $('.five textarea').html(getFive)
 
 
+// adds event listners to each of the buttons that then stores the value to localStorage
 $('.btn9').on('click',function() {
     let text = $('.nine textarea').val();
     localStorage.setItem('nine', text)
@@ -82,6 +85,7 @@ $('.btn5').on('click',function() {
 })
 
 
+// gets the value of the name attributes
 var nineTime = $('.nine textarea').attr('name')
 var tenTime = $('.ten textarea').attr('name')
 var elevenTime = $('.eleven textarea').attr('name')
@@ -93,8 +97,11 @@ var fourTime = $('.four textarea').attr('name')
 var fiveTime = $('.five textarea').attr('name')
 
 
+// gets the value of the current hour
 var currentHour = moment().hour()
 
+/* checks to see if the name attribute value is 
+    equal, more or less than the current hour */
 if (currentHour == nineTime) {
     $('.nine').addClass('present');
 } else if (currentHour < nineTime) {
@@ -166,4 +173,3 @@ if (currentHour == fiveTime) {
 } else {
     $('.five').addClass('past');
 }
-

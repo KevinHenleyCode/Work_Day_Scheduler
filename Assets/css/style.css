@@ -1,3 +1,4 @@
+/* styles the body of the body */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -5,6 +6,8 @@ body {
   background-color: rgb(175, 158, 175);
 }
 
+
+/* styles the textarea */
 textarea {
   background: transparent;
   border: none;
@@ -14,34 +17,46 @@ textarea {
   padding: 10px;
 }
 
+
+/* adds style to the jumbotron */
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid rgb(49, 49, 49);
 }
 
+
+/* styles the clock */
 .clock {
   font-size: 1.5em;
   color: #77dd77;
 }
 
+
+/* styles the description */
 .description {
   white-space: pre-wrap;
 }
 
+
+/* styles the timeblock area */
 .time-block {
   text-align: center;
   border-radius: 15px;
 }
 
+
+/* styles the rows */
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
 }
 
+
+/* creates the styles for the past present and future rows */
 .past {
   background-color: #a7a0a0;
   color: white;
@@ -57,6 +72,8 @@ textarea {
   color: white;
 }
 
+
+/* styles the save button and the save button hover state */
 .saveBtn {
   background-color: #45a5bb;
   color: white;
